@@ -9,7 +9,7 @@ class Publication extends Component {
 
     render() {
         return (
-            <div>
+            <div className="box-post">
                 <p>{this.props.post}</p>
                 <button onClick={this.props.onClick}>👍{this.props.likes}</button>
             </div>

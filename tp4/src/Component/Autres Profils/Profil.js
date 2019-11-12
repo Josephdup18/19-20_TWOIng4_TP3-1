@@ -8,9 +8,11 @@ class Profil extends Component {
   
     render() {
         return (
+            <div className="box-header">
             <button onClick={this.props.onClick}>
                 <p>{this.props.prenom}</p>
             </button>
+            </div>
         );
     }
 }

@@ -21,7 +21,7 @@ class App extends React.Component {
       prenom: "Bob",
       nom: "Thome",
       anniversaire: "8/10/1978",
-      post: "Je prefere le Rock",
+      post: "Salut tous le monde, je viens de decouvrir on verra de Nekfeu, vous connaissez ?",
       image: bob,
       like: 0,
       //id:1
@@ -31,7 +31,7 @@ class App extends React.Component {
       prenom: "Martine",
       nom: "Dupont",
       anniversaire: '12/03/1998',
-      post: 'Je prefere le Jazz',
+      post: "Qui peut me rappeler chez qui était l'after hier soir ? ",
       image: martine,
       like: 0,
       //id:2
@@ -40,7 +40,7 @@ class App extends React.Component {
       prenom: 'Camille',
       nom: 'Dupuy',
       anniversaire: '12/12/1998',
-      post: 'Je prefere le Rap',
+      post: "Camille est un surnom... Mon vrai nom c'est Batman !",
       image: camille,
       like: 0,
       //id:3
@@ -62,8 +62,8 @@ handleClick(i){
  
   return (
     <div className="App">
-      <p> I'm the parent</p>
-       
+      <header>
+       <h3 style={{textAlign:"center"}}>Mon Facebook Ultra-lite</h3>
       <Profil 
           prenom={this.state.profils[0].prenom}
           onClick={() => this.handleClick(0)}
@@ -76,7 +76,9 @@ handleClick(i){
           prenom={this.state.profils[2].prenom}
           onClick={() => this.handleClick(2)}
       />
+    </header>
 
+    <main>
       <Monprofil 
        image={this.state.profils[this.state.show].image}
        prenom={this.state.profils[this.state.show].prenom}
@@ -87,6 +89,8 @@ handleClick(i){
       <Publication 
         post={this.state.profils[this.state.show].post}
       />
+
+      </main>
   
     </div>
   );
